@@ -1,5 +1,16 @@
 class File::Copy {
-
+  use Sys::IO;
+  
+  method move : int ($from : string, $to : string) {
+    my $status = Sys::IO->rename($from, $to);
+    
+    my $success = 0;
+    if ($status == 0) {
+      $success = 1;
+    }
+    
+    return $success;
+  }
 }
 
 =pod
