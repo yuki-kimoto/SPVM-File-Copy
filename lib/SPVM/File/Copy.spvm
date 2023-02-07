@@ -3,7 +3,7 @@ class File::Copy {
   use Sys::IO;
   use IO::File;
   
-  method copy : int ($from : string, $to : string, $size = 0 : int) {
+  static method copy : int ($from : string, $to : string, $size = 0 : int) {
     
     my $from_io_file = IO::File->new($from, "<");
     
@@ -39,7 +39,8 @@ class File::Copy {
     return $success;
   }
   
-  method move : int ($from : string, $to : string) {
+  static method move : int ($from : string, $to : string) {
+    
     my $status = Sys::IO->rename($from, $to);
     
     my $success = 0;
