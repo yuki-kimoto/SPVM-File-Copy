@@ -27,12 +27,15 @@ class File::Copy {
     my $offset = 0;
     
     while (1) {
-      my $read_length = $from_io_file->sysread($buffer, $size, $offset);
-      $to_io_file->syswrite($buffer, $read_length, $offset);
+      my $read_length = $from_io_file->sysread($buffer, $size);
+      if ($read_length == 0) {
+        last;
+      }
+      $to_io_file->syswrite($buffer, $read_length);
     }
     
-    $from_io_file->close;
-    $to_io_file->close;
+    # $from_io_file->close;
+    # $to_io_file->close;
     
     my $success = 1;
     
