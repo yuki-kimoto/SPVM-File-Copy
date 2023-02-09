@@ -1,4 +1,4 @@
 # SPVM::File::Copy
 
-SPVM::File::Copy is a SPVM module.
+<a href="https://metacpan.org/pod/SPVM::File::Copy">SPVM::File::Copy</a>
 
