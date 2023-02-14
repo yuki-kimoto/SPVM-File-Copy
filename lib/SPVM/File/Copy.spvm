@@ -34,8 +34,8 @@ class File::Copy {
       $to_io_file->syswrite($buffer, $read_length);
     }
     
-    # $from_io_file->close;
-    # $to_io_file->close;
+    $from_io_file->close;
+    $to_io_file->close;
     
     my $success = 1;
     
