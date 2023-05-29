@@ -1,6 +1,6 @@
 package SPVM::File::Copy;
 
-our $VERSION = '0.02';
+our $VERSION = "0.020";
 
 1;
 

@@ -2,6 +2,8 @@
 # MIT License
 
 class File::Copy {
+  version "0.020";
+  
   use Sys::IO::Stat;
   use Sys::IO;
   use IO::File;
