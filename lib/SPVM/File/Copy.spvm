@@ -3,7 +3,7 @@ class File::Copy {
   use Sys::IO;
   use IO::File;
   
-  static method copy : int ($from : string, $to : string, $size = 0 : int) {
+  static method copy : int ($from : string, $to : string, $size : int = 0) {
     
     my $from_io_file = IO::File->new($from, "<");
     

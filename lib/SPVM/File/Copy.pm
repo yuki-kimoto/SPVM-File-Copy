@@ -29,7 +29,7 @@ C<File::Copy> providdes the features to copy and move files.
 
 =head2 copy
 
-  static method copy : int ($from : string, $to : string, $size = 0 : int);
+  static method copy : int ($from : string, $to : string, $size : int = 0);
 
 Copies the file specified $from to $to. The $size is the buffer size to be used file copy. If the $size is C<0>, the size is decided automatically.
 
