@@ -5,7 +5,6 @@ class File::Copy {
   version "0.022";
   
   use Sys;
-  use Sys::IO::Stat;
   use IO::File;
   
   static method copy : void ($from : string, $to : string, $size : int = -1) {
@@ -14,8 +13,7 @@ class File::Copy {
     
     my $to_io_file = IO::File->new($to, ">");
     
-    my $fstat_from = Sys::IO::Stat->new;
-    Sys::IO::Stat->fstat($from_io_file->fileno, $fstat_from);
+    my $fstat_from = Sys->fstat($from_io_file->fileno);
     
     my $size_max = 1024 * 1024 * 2;
     if ($size < 0) {
