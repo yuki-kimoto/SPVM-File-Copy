@@ -29,7 +29,7 @@ File::Copy class in L<SPVM> has methods to move and copy files.
 
 C<static method copy : void ($from : string, $to : string, $size : int = -1);>
 
-Copies the first $size bytes of the source file $from to the distination file $to. If $size is a negative value, the size is the size of $from.
+Copies the first $size bytes of the source file $from to the distination file $to. If $size is a negative value, it is set to the size of $from.
 
 =head2 move
 
@@ -41,11 +41,11 @@ Moves the source file $from to the distination file $to.
 
 =over 2
 
-=item * L<Sys::IO::Stat|SPVM::Sys::IO::Stat>
-
-=item * L<Sys::IO|SPVM::Sys::IO>
+=item * L<Sys|SPVM::Sys>
 
 =item * L<IO::File|SPVM::IO::File>
+
+=item * L<File::Find|SPVM::File::Find>
 
 =back
 
