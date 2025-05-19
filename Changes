@@ -5,6 +5,8 @@
     * The return type of File::Copy#move method is chaned to void.
   [Requirement Changes]
     * Require SPVM::Sys 0.535.
+  [Bug Fix]
+    * Fix a bug that File::Copy#rename method does not work well in Windows.
 0.022 2025-01-25
   [Requirement Changes]
     * Require SPVM 0.990042.
