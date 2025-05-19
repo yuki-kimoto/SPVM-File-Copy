@@ -5,6 +5,7 @@ class File::Copy {
   version "0.022";
   
   use Sys;
+  use Sys::IO;
   use IO::File;
   
   static method copy : void ($from : string, $to : string, $size : int = -1) {
@@ -43,6 +44,6 @@ class File::Copy {
   
   static method move : void ($from : string, $to : string) {
     
-    Sys->rename($from, $to);
+    Sys::IO->rename($from, $to);
   }
 }
