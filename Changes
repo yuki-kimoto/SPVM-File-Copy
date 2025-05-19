@@ -3,7 +3,8 @@
     * The default of $size arugment of File::Copy#copy method is changed from 0 to -1.
     * The return type of File::Copy#copy method is chaned to void.
     * The return type of File::Copy#move method is chaned to void.
-    
+  [Requirement Changes]
+    * Require SPVM::Sys 0.535.
 0.022 2025-01-25
   [Requirement Changes]
     * Require SPVM 0.990042.
